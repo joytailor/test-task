@@ -2,7 +2,7 @@
     <ElTable
         :data="usersList"
         border
-        height="500px"
+        height="300px"
         size="small"
         @row-click="selectRow"
     >
@@ -26,34 +26,6 @@
             label="Email"
             min-width="40"
         />
-        <ElTableColumn
-            label="Edit"
-            min-width="20"
-        >
-            <template>
-                <router-link to="/edit">
-                <div class="wrapper">
-                    <ElButton
-                        type="warning"
-                        icon="el-icon-edit"
-                    />
-                </div>
-                </router-link>
-            </template>
-        </ElTableColumn>
-        <ElTableColumn
-            label="Delete"
-            min-width="20"
-        >
-            <template>
-                <div class="wrapper">
-                    <ElButton
-                        type="danger"
-                        icon="el-icon-delete"
-                    />
-                </div>
-            </template>
-        </ElTableColumn>
     </ElTable>
 </template>
 
@@ -84,10 +56,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-    .wrapper {
-        display: flex;
-        justify-content: center;
-    }
-</style>
